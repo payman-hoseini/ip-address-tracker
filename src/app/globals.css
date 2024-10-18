@@ -24,3 +24,11 @@
   height: 100%;
   background-repeat: no-repeat;
 }
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+.z-i {
+  z-index: 50;
+}
