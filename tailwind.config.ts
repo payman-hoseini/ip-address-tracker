@@ -9,9 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'Very-Dark-Gray': 'hsl(0, 0%, 17%)',
+        'Dark-Gray': 'hsl(0, 0%, 59%)'
       },
+      fontFamily : {
+        Rubik : ["Rubik"]
+      }
     },
   },
   plugins: [],
