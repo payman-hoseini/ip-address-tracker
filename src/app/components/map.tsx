@@ -11,12 +11,12 @@ export default function Map(){
       })
     return (
         <div className='w-[75vw] h-screen'>
-          <MapContainer center={[35.689198, 51.388973]} zoom={13} scrollWheelZoom={true}>
+          <MapContainer center={[51.025, 21.63]} zoom={13} scrollWheelZoom={true}>
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={[35.689198, 51.388973]} icon={customeIcon}>
+            <Marker position={[51.025, 21.63]} icon={customeIcon}>
               <Popup>
                 A pretty CSS3 popup. <br /> Easily customizable.
               </Popup>
