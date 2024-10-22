@@ -1,13 +1,14 @@
 'use client'
 import { useEffect, useState } from "react";
 import Map from "./components/map";
-import { findLocation } from "./components/location";
+import { Details, findLocation } from "./components/location";
 
-export default  function Home() {
+export default function Home() {
   const [ip , setIp] = useState("")
-  let data;
-  const [details , setDetails] = useState()
-  
+  // const [data,setData] = useState<Details | null>(null)
+  let data : Details | null;
+  const [details , setDetails] = useState<Details | null>()
+
   useEffect (()=>{
     searchIP()
   },[])
@@ -49,7 +50,7 @@ export default  function Home() {
                 <p className="text-Dark-Gray text-[10px] font-bold tracking-widest">ISP</p>
                 <p className="text-Very-Dark-Gray font-medium mt-1 text-2xl">{details?.isp}</p>
               </div>
-        </div>
+          </div>
         </div>
         <Map/>
       </main>
