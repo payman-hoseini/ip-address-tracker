@@ -5,10 +5,8 @@ import { Details, findLocation } from "./components/location";
 
 export default function Home() {
   const [ip , setIp] = useState("")
-  // const [data,setData] = useState<Details | null>(null)
   let data : Details | null;
   const [details , setDetails] = useState<Details | null>()
-
   useEffect (()=>{
     searchIP()
   },[])
@@ -19,7 +17,6 @@ export default function Home() {
   async function searchIP(){
     data = await findLocation(ip)
     setDetails(data)
-    console.log(data)
   }
 
   return (
@@ -52,7 +49,7 @@ export default function Home() {
               </div>
           </div>
         </div>
-        <Map/>
+        <Map details={details}/>
       </main>
     </>
   );
