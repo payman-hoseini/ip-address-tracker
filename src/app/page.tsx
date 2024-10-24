@@ -19,7 +19,7 @@ export default function Home() {
     const ipv4Regex = /^(\d{1,3}\.){3}\d{1,3}$/;
     const ipv6Regex = /^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$/;
     let flag = false;
-    if (ipv4Regex.test(ipAddress) || ipAddress == "") {
+    if (ipv4Regex.test(ipAddress)) {
       const octets = ipAddress.split('.');
       for (let i = 0; i < octets.length; i++) {
         const octet = parseInt(octets[i], 10);
@@ -33,6 +33,9 @@ export default function Home() {
       flag = true;
     }
     else if (/(?:[\w-]+\.)+[\w-]+/.test(ipAddress)){
+      flag = true
+    }
+    else if(ipAddress == ""){
       flag = true
     }
     return flag
