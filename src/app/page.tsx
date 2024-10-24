@@ -38,7 +38,7 @@ export default function Home() {
     return flag
   }
   async function searchIP(){
-    let validateIp = validateIpAddress(ip)
+    const validateIp = validateIpAddress(ip)
     if(validateIp){
       data = await findLocation(ip)
       setDetails(data)
