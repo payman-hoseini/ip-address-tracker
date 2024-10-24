@@ -1,12 +1,10 @@
 'use client'
-// import { MapContainer, Marker, Popup } from 'react-leaflet'
-// import { TileLayer } from 'react-leaflet'
-// import { Icon } from 'leaflet'
+import { MapContainer, Marker, Popup } from 'react-leaflet'
+import { TileLayer } from 'react-leaflet'
+import { Icon } from 'leaflet'
 import { Details } from '../location'
 
 export default function Map({details , error} : {details : Details| null | undefined , error : boolean}){
-    const {Icon} = require('leaflet')
-    const {MapContainer, Marker, Popup , TileLayer} = require('react-leaflet');
     const customeIcon = new Icon({
         iconUrl : "https://cdn-icons-png.flaticon.com/512/447/447031.png",
         iconSize : [38,38]
