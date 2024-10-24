@@ -12,16 +12,16 @@ export default function Map({details , error} : {details : Details| null | undef
       })
     return (
         <>
-          {error ? <div className='text-center h-screen w-[75vw] text-5xl font-bold mt-28 animate-pulse'>IP Address Is Not Valid</div>
+          {error ? <div className='text-center h-screen lg:w-[75vw] text-3xl md:text-5xl font-bold mt-28 animate-pulse'>IP Address Is Not Valid</div>
           :
-          <div className='w-[75vw] h-screen'>
+          <div className='h-screen'>
             <MapContainer center={(details?.lat != undefined && details?.lon != undefined ) ? [details?.lat, details?.lon] : [0,40]} zoom={2} scrollWheelZoom={true}>
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
               <Marker position={(details?.lat != undefined && details?.lon != undefined ) ? [details?.lat , details?.lon] : [50,50]} icon={customeIcon}>
-                <Popup>
+                <Popup className='text-md font-Rubik font-medium'>
                   {details?.country + " / " + details?.city}
                 </Popup>
               </Marker>
