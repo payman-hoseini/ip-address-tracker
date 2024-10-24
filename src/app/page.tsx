@@ -64,7 +64,7 @@ export default function Home() {
           <div className="mt-5 md:w-[40%] flex items-center">
               <input onChange={reciveIP} type="text" placeholder="Search for any IP address or domain" className="md:w-[90%] py-3 px-4 rounded-l-xl outline-none"/>
               <button onClick={searchIP} className="bg-Very-Dark-Gray py-[17px] px-5 rounded-r-xl hover:duration-300 hover:bg-opacity-75">
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" strokeWidth="3" d="M2 1l6 6-6 6"/></svg>
               </button>
           </div>
           {error ?  <div className="bg-white mt-10 py-7 shadow-lg px-16 -mb-16 rounded-xl z-i">Error</div>
