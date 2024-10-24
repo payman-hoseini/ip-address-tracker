@@ -5,7 +5,7 @@ import { Details, findLocation } from "./components/location";
 
 export default function Home() {
   const [ip , setIp] = useState("")
-  let data : Details | null;
+  let data : Details | undefined;
   const [details , setDetails] = useState<Details | null>()
   const [error , setError] = useState(false)
   useEffect (()=>{
